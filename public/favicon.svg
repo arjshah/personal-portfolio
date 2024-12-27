@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#1C1917"/>
+  <!-- A letter -->
+  <path d="M10 22L14 10H18L22 22H19L16 12H16L13 22H10Z" fill="white"/>
+  <!-- Crossbar of A -->
+  <path d="M13 15H19V17H13V15Z" fill="white"/>
+</svg> 

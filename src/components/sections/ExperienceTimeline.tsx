@@ -17,7 +17,7 @@ const ExperienceTimeline = () => {
       company: "Carta",
       period: "Oct 2021 - Apr 2024",
       location: "San Francisco Bay Area",
-      description: "Led 12+ engineering teams across product and platform. Built Fund Tax from 0 to multi-million ARR in 5 months. Scaled identity, documents, valuations, and data infrastructure services serving 30k+ startups."
+      description: "Led 12+ engineering teams across product and platform (50+ engineers). Built Fund Tax from 0 to multi-million ARR in 5 months. Scaled identity, documents, valuations, and data infrastructure services serving 30k+ startups."
     },
     {
       role: "Co-Founder",

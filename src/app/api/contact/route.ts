@@ -41,7 +41,10 @@ ${message}
   try {
     await transporter.sendMail(mailOptions)
     return NextResponse.json({ message: 'Email sent successfully' })
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { message: 'Failed to send email' },
+      { status: 500 }
+    )
   }
 } 

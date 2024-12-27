@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { ArrowRight, Linkedin, Github } from 'lucide-react'
-import { Card } from "@/components/ui/card"
 import Image from 'next/image'
 import ConsultationForm from './ConsultationForm'
 
@@ -17,7 +16,7 @@ const HeroSection = () => {
           <div className="lg:col-span-8 space-y-8 order-2 lg:order-1">
             <div className="space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-stone-900">
-                Hi, I'm Arjun
+                Hi, I&apos;m Arjun
               </h1>
               {/* Shorter, punchier intro */}
               <p className="text-lg sm:text-xl text-stone-600 font-light leading-relaxed max-w-3xl">

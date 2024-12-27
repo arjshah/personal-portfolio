@@ -82,7 +82,9 @@ const ConsultationForm = ({ onClose }: ConsultationFormProps) => {
             <div className="text-center space-y-4">
               <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto" />
               <p className="text-xl font-light text-stone-900">Message sent successfully</p>
-              <p className="text-stone-600">Thank you for your interest. I'll be in touch soon.</p>
+              <p className="text-sm text-stone-600">
+                Thank you for your interest. I&apos;ll be in touch soon.
+              </p>
             </div>
           </div>
         )
