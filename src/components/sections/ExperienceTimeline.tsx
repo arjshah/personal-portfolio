@@ -92,47 +92,24 @@ const ExperienceTimeline = () => {
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-stone-200" />
 
           {experiences.map((exp, index) => (
-            <div key={index} className="relative mb-12 lg:mb-16 last:mb-0">
-              {/* Desktop layout */}
+            <article key={index} className="relative mb-12 lg:mb-16 last:mb-0">
               <div className="hidden lg:block">
                 <div className={`flex items-start justify-${index % 2 === 0 ? 'end' : 'start'} w-1/2 ${index % 2 === 0 ? 'ml-auto pr-8' : 'mr-auto pl-8'}`}>
                   <Card className="w-full p-6 hover:shadow-md transition-shadow">
-                    <div className="space-y-3">
-                      <div>
-                        <h3 className="text-lg font-medium text-stone-900">{exp.role}</h3>
-                        <p className="text-stone-600">{exp.company}</p>
-                      </div>
-                      <div className="flex flex-wrap gap-2 text-sm text-stone-500">
-                        <span>{exp.period}</span>
-                        <span>•</span>
-                        <span>{exp.location}</span>
-                      </div>
-                      <p className="text-sm text-stone-600 leading-relaxed">{exp.description}</p>
-                    </div>
-                  </Card>
-                </div>
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-3 h-3 bg-stone-900 rounded-full" />
-              </div>
-
-              {/* Mobile/Tablet layout */}
-              <div className="lg:hidden">
-                <Card className="p-6 hover:shadow-md transition-shadow">
-                  <div className="space-y-3">
-                    <div>
+                    <header>
                       <h3 className="text-lg font-medium text-stone-900">{exp.role}</h3>
                       <p className="text-stone-600">{exp.company}</p>
-                    </div>
+                    </header>
                     <div className="flex flex-wrap gap-2 text-sm text-stone-500">
-                      <span>{exp.period}</span>
+                      <time dateTime={exp.period}>{exp.period}</time>
                       <span>•</span>
-                      <span>{exp.location}</span>
+                      <address className="not-italic">{exp.location}</address>
                     </div>
                     <p className="text-sm text-stone-600 leading-relaxed">{exp.description}</p>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

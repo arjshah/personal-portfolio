@@ -13,9 +13,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun Shah | Engineering Executive",
-  description: "Engineering executive specialized in scaling teams, AI integration, and rapid product development.",
+  title: "Arjun Shah | Engineering Executive & AI Consultant",
+  description: "Engineering executive specialized in scaling teams, AI integration, and rapid product development. Former engineering leader at Carta and Amazon.",
   metadataBase: new URL('https://www.arjunshah.co'),
+  keywords: [
+    'Engineering Executive',
+    'AI Integration',
+    'Technical Leadership',
+    'Engineering Management',
+    'Team Scaling',
+    'Technical Due Diligence',
+    'AI Consulting',
+    'Silicon Valley Executive',
+    'Engineering Strategy',
+    'Product Development'
+  ],
+  authors: [{ name: 'Arjun Shah' }],
+  creator: 'Arjun Shah',
+  publisher: 'Arjun Shah',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.arjunshah.co',
+  },
   openGraph: {
     type: 'website',
     url: 'https://www.arjunshah.co',
