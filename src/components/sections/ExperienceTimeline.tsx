@@ -93,6 +93,7 @@ const ExperienceTimeline = () => {
 
           {experiences.map((exp, index) => (
             <article key={index} className="relative mb-12 lg:mb-16 last:mb-0">
+              {/* Desktop layout */}
               <div className="hidden lg:block">
                 <div className={`flex items-start justify-${index % 2 === 0 ? 'end' : 'start'} w-1/2 ${index % 2 === 0 ? 'ml-auto pr-8' : 'mr-auto pl-8'}`}>
                   <Card className="w-full p-6 hover:shadow-md transition-shadow">
@@ -100,7 +101,7 @@ const ExperienceTimeline = () => {
                       <h3 className="text-lg font-medium text-stone-900">{exp.role}</h3>
                       <p className="text-stone-600">{exp.company}</p>
                     </header>
-                    <div className="flex flex-wrap gap-2 text-sm text-stone-500">
+                    <div className="flex flex-wrap gap-2 text-sm text-stone-500 mt-1.5 mb-2">
                       <time dateTime={exp.period}>{exp.period}</time>
                       <span>•</span>
                       <address className="not-italic">{exp.location}</address>
@@ -108,6 +109,24 @@ const ExperienceTimeline = () => {
                     <p className="text-sm text-stone-600 leading-relaxed">{exp.description}</p>
                   </Card>
                 </div>
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-3 h-3 bg-stone-900 rounded-full" />
+              </div>
+
+              {/* Mobile/Tablet layout */}
+              <div className="lg:hidden">
+                <Card className="p-6 hover:shadow-md transition-shadow">
+                  <header>
+                    <h3 className="text-lg font-medium text-stone-900">{exp.role}</h3>
+                    <p className="text-stone-600">{exp.company}</p>
+                  </header>
+                  <div className="flex flex-wrap gap-2 text-sm text-stone-500 mt-1.5 mb-2">
+                    <time dateTime={exp.period}>{exp.period}</time>
+                    <span>•</span>
+                    <address className="not-italic">{exp.location}</address>
+                  </div>
+                  <p className="text-sm text-stone-600 leading-relaxed">{exp.description}</p>
+                </Card>
               </div>
             </article>
           ))}
