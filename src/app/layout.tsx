@@ -15,6 +15,29 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Arjun Shah | Engineering Executive",
   description: "Engineering executive specialized in scaling teams, AI integration, and rapid product development.",
+  metadataBase: new URL('https://www.arjunshah.co'),
+  openGraph: {
+    type: 'website',
+    url: 'https://www.arjunshah.co',
+    title: 'Arjun Shah | Engineering Executive',
+    description: 'Engineering executive specialized in scaling teams, AI integration, and rapid product development.',
+    siteName: 'Arjun Shah',
+    images: [
+      {
+        url: '/og-image.png',  // We'll create this
+        width: 1200,
+        height: 630,
+        alt: 'Arjun Shah - Engineering Executive'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arjun Shah | Engineering Executive',
+    description: 'Engineering executive specialized in scaling teams, AI integration, and rapid product development.',
+    images: ['/og-image.png'],
+    creator: '@AShah460'
+  },
   icons: {
     icon: [
       { rel: 'icon', url: '/favicon.ico' },
