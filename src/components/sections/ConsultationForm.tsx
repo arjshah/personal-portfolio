@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
+import { track } from '@vercel/analytics'
 
 interface ConsultationFormProps {
   onClose: () => void;
@@ -51,6 +52,12 @@ const ConsultationForm = ({ onClose }: ConsultationFormProps) => {
       })
 
       if (response.ok) {
+        track('consultation_form_submit', {
+          type: formData.type,
+          timeline: formData.timeline,
+          company_size: formData.company ? 'provided' : 'not_provided'
+        });
+
         setFormStatus('success')
         setFormData({
           name: '',
@@ -60,12 +67,15 @@ const ConsultationForm = ({ onClose }: ConsultationFormProps) => {
           message: '',
           timeline: ''
         })
-        // Auto close after 2 seconds on success
+        
         setTimeout(() => {
           onClose()
         }, 2000)
       } else {
         const data = await response.json()
+        track('consultation_form_error', {
+          error: data.error || 'Unknown error'
+        });
         throw new Error(data.error || 'Failed to send message')
       }
     } catch (error) {
@@ -73,6 +83,10 @@ const ConsultationForm = ({ onClose }: ConsultationFormProps) => {
       setErrorMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
     }
   }
+
+  useEffect(() => {
+    track('consultation_form_open');
+  }, []);
 
   const StatusMessage = () => {
     switch (formStatus) {
