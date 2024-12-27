@@ -38,16 +38,26 @@ const Navigation = () => {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-300 ${
       isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo or Name */}
-          <div className="text-stone-900 font-light">
+          {/* Logo or Name - Now clickable */}
+          <button
+            onClick={scrollToTop}
+            className="text-stone-900 font-light hover:text-stone-600 transition-colors"
+          >
             <span className="text-lg">Arjun Shah</span>
-          </div>
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
