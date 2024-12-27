@@ -103,7 +103,7 @@ const ConsultationForm = ({ onClose }: ConsultationFormProps) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[200]">
       <div className="bg-white p-8 max-w-xl w-full mx-4 relative max-h-[90vh] overflow-y-auto">
         <button
           onClick={onClose}
