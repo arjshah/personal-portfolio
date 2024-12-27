@@ -8,6 +8,14 @@ const ThoughtLeadership = () => {
   const content = [
     {
       type: 'Article',
+      title: 'How PushPress Integrates AI into Software Development',
+      venue: 'Medium',
+      description: 'Deep dive into how AI integration made our 26-person engineering team 40% more productive with faster reviews, more PRs, and quicker deployments.',
+      link: 'https://medium.com/@arjun_shah/how-pushpress-integrates-ai-into-software-development-51ada589c440',
+      date: '2024'
+    },
+    {
+      type: 'Article',
       title: 'Four Lessons from a First-time Founder',
       venue: 'Medium',
       description: 'Insights and learnings from the journey of building and exiting a startup.',
@@ -54,7 +62,7 @@ const ThoughtLeadership = () => {
         <div className="max-w-2xl mx-auto mb-12 sm:mb-16 text-center">
           <h2 className="text-2xl sm:text-3xl font-light text-stone-900">Thought Leadership</h2>
           <p className="mt-4 text-base sm:text-lg text-stone-600">
-            Speaking and writing about engineering leadership and organizational design
+            Speaking and writing about technology and engineering leadership
           </p>
         </div>
 
