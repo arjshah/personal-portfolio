@@ -8,6 +8,15 @@ const ThoughtLeadership = () => {
   const content = [
     {
       type: 'Article',
+      title: 'Thinking in Maximums',
+      venue: 'Medium',
+      staffPick: true,
+      description: 'Escaping the tyranny of incrementalism in product building. Featured in Medium\'s Daily Spotlight for challenging conventional MVP wisdom.',
+      link: 'https://medium.com/@arjun_shah/thinking-in-maximums-c8f1fc4b6c50',
+      date: '2024'
+    },
+    {
+      type: 'Article',
       title: 'How PushPress Integrates AI into Software Development',
       venue: 'Medium',
       description: 'Deep dive into how AI integration made our 26-person engineering team 40% more productive with faster reviews, more PRs, and quicker deployments.',
@@ -78,12 +87,21 @@ const ThoughtLeadership = () => {
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="text-sm text-stone-500">{item.type}</span>
                       <span className="text-sm text-stone-400">•</span>
+                      <span className="text-sm text-stone-500">{item.venue}</span>
+                      {item.staffPick && (
+                        <>
+                          <span className="text-sm text-stone-400">•</span>
+                          <span className="text-xs px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full border border-amber-200">
+                            Staff Pick
+                          </span>
+                        </>
+                      )}
+                      <span className="text-sm text-stone-400">•</span>
                       <span className="text-sm text-stone-500">{item.date}</span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-medium text-stone-900 pr-8 sm:pr-0">
                       {item.title}
                     </h3>
-                    <p className="text-stone-600 text-sm">{item.venue}</p>
                     <p className="text-stone-600 text-sm sm:text-base">{item.description}</p>
                   </div>
                   <ArrowUpRight className="hidden sm:block w-5 h-5 text-stone-400 group-hover:text-stone-600 transition-colors flex-shrink-0" />
