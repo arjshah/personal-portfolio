@@ -7,6 +7,30 @@ import { Separator } from "@/components/ui/separator"
 const ThoughtLeadership = () => {
   const content = [
     {
+      type: 'Podcast',
+      title: 'The CTPO: The Future of Tech Leadership',
+      venue: 'The Tech Trek',
+      description: 'Exploring how the CPTO role is transforming traditional engineering and product boundaries, and reshaping modern software development practices.',
+      link: 'https://www.youtube.com/watch?v=kgoygAoCQxg',
+      date: '2025'
+    },
+    {
+      type: 'Podcast',
+      title: '16+ Years of Silicon Valley Expertise in Scaling Tech Teams',
+      venue: 'MovingFast Tech Podcast',
+      description: 'Building and scaling engineering-led organizations in Silicon Valley.',
+      link: 'https://open.spotify.com/episode/5euemnCdxUsz3hCvkfDK9f',
+      date: '2025'
+    },
+    {
+      type: 'Article',
+      title: 'Why AI Won\'t Flatten the Software Engineering Talent Curve',
+      venue: 'Medium',
+      description: 'Analysis of why artificial intelligence will augment rather than replace skilled software engineers, and how it affects the engineering talent landscape.',
+      link: 'https://medium.com/@arjun_shah/why-ai-wont-flatten-the-software-engineering-talent-curve-ad880ea26912',
+      date: '2025'
+    },
+    {
       type: 'Article',
       title: 'Thinking in Maximums',
       venue: 'Medium',
